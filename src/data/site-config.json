@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "Modern Ajans",
+    "description": "Şirketinizin sloganı buraya gelecek."
+  },
+  "theme": {
+    "colors": {
+      "primary": "#FF0000",
+      "secondary": "#10B981",
+      "background": "#F3F4F6",
+      "text": "#1F2937"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Open Sans"
+    },
+    "style": "glassmorphism"
+  },
+  "content": {
+    "hero": {
+      "headline": "İşinizi Dijitale Taşıyın",
+      "subheadline": "AI destekli çözümlerimizle tanışın.",
+      "ctaButtonText": "Teklif Alın"
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "description": "2020'den beri dijital dünyada fark yaratıyoruz. Modern teknolojiler ve yaratıcı çözümlerimizle işletmenizi geleceğe taşıyoruz."
+    },
+    "features": [
+      {
+        "title": "Hızlı",
+        "desc": "Şimşek hızında açılış."
+      },
+      {
+        "title": "Güvenli",
+        "desc": "Modern altyapı."
+      },
+      {
+        "title": "Uygun",
+        "desc": "Bütçe dostu."
+      }
+    ]
+  }
+}

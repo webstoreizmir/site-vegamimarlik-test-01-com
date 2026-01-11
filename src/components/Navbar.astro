@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 glass">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+          <span class="text-white font-bold text-xl">{title.charAt(0)}</span>
+        </div>
+        <span class="text-xl font-heading font-bold text-text">{title}</span>
+      </div>
+      
+      <!-- Navigation Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#hero" class="text-text/80 hover:text-primary font-medium transition-colors">
+          Ana Sayfa
+        </a>
+        <a href="#about" class="text-text/80 hover:text-primary font-medium transition-colors">
+          Hakkımızda
+        </a>
+        <a href="#features" class="text-text/80 hover:text-primary font-medium transition-colors">
+          Özellikler
+        </a>
+        <a 
+          href="#contact" 
+          class="px-6 py-2 rounded-full bg-primary text-white font-medium hover:shadow-lg hover:shadow-primary/50 transform hover:scale-105 transition-all"
+        >
+          İletişim
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-text">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

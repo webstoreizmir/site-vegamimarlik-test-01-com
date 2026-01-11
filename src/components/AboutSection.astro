@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section id="about" class="py-24 relative">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="glass rounded-3xl p-12 hover:shadow-2xl transition-shadow duration-500">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          {title}
+        </h2>
+        <p class="text-lg text-text/80 leading-relaxed text-center font-body">
+          {description}
+        </p>
+        
+        <!-- Decorative Elements -->
+        <div class="mt-8 flex justify-center space-x-4">
+          <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+          <div class="w-2 h-2 rounded-full bg-secondary animate-pulse" style="animation-delay: 0.2s;"></div>
+          <div class="w-2 h-2 rounded-full bg-primary animate-pulse" style="animation-delay: 0.4s;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

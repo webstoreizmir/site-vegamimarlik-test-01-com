@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10;
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, 
+      rgb(var(--color-primary)), 
+      rgb(var(--color-secondary))
+    );
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg,
+      rgba(var(--color-primary), 0.1) 0%,
+      rgba(var(--color-secondary), 0.1) 100%
+    );
+  }
+}
+
+/* Smooth animations */
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+}

@@ -1,0 +1,46 @@
+---
+interface Props {
+  headline: string;
+  subheadline: string;
+  ctaButtonText: string;
+}
+
+const { headline, subheadline, ctaButtonText } = Astro.props;
+---
+
+<section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+  <!-- Animated Background Gradients -->
+  <div class="absolute inset-0 gradient-bg opacity-50"></div>
+  <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+  
+  <!-- Content -->
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary leading-tight">
+        {headline}
+      </h1>
+      <p class="text-xl md:text-2xl text-text/70 mb-10 font-body">
+        {subheadline}
+      </p>
+      
+      <!-- CTA Button -->
+      <a 
+        href="#contact"
+        class="inline-block px-10 py-4 text-lg font-semibold text-white rounded-full gradient-primary shadow-2xl shadow-primary/50 hover:shadow-3xl hover:shadow-primary/70 transform hover:scale-110 transition-all duration-300 hover:-translate-y-1"
+      >
+        {ctaButtonText}
+        <svg class="inline-block w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+      
+      <!-- Scroll Indicator -->
+      <div class="mt-16 animate-bounce">
+        <svg class="w-6 h-6 mx-auto text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
